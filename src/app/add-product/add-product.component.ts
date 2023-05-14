@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebApiService } from '../Service/web-api.service';
+//import { [element] } from '@angular/forms'
+//import {[element]} from ''
 
 @Component({
   selector: 'app-add-product',
@@ -28,10 +30,13 @@ export class AddProductComponent implements OnInit {
     
     this.productService.addProduct(data)
       .subscribe(
-        response => {
+        {next: response => {
           console.log(response)
           this.submitted = true
+          this.newProduct()
         },
+        error: (e) => console.log(e)
+      }
        
       )
   }

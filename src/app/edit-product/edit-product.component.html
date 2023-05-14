@@ -1,1 +1,7 @@
 <p>edit-product works!</p>
+<form>
+    <input type="text" id="name" [(ngModel)]="data.name" name="name">
+    <input type="text" id="description" [(ngModel)]="data.description" name="description">
+    <input type="number" id="price" [(ngModel)]="data.price" name="price">
+    <button (click)="updateProduct()" >submit</button>
+</form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebApiService } from '../Service/web-api.service';
+import { of } from 'rxjs'
 
 @Component({
   selector: 'app-home',
@@ -16,13 +17,15 @@ export class HomeComponent implements OnInit {
   getAll(): void {
     this.myItems.getProduct()
     .subscribe(
-      data => {
-        this.products = data
-        console.log(data)
-      },
-      error => {
-        console.log(error)
+      {
+        next: data => {
+          this.products = data
+          console.log(data)
+        },
+        error: (e) => console.log(e),
+        complete: () => console.log('complete'),
       }
+      
     )
   }
 }
