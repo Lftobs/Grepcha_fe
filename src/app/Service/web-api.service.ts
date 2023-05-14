@@ -1,11 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs'
+
+const baseUrl="http://127.0.0.1:8080/api/products/"
 
 @Injectable({
   providedIn: 'root'
 })
 export class WebApiService {
   myItems;
-  constructor() {
+  constructor(private http: HttpClient) {
     this.myItems = [
       {
         name: 'product 1',
@@ -31,7 +35,23 @@ export class WebApiService {
    }
 
   getProduct() {
-    return this.myItems
+    return this.http.get(`${baseUrl}`);
+  }
+
+  addProduct(data:any){
+    return this.http.post(`${baseUrl}/add`, data)
+  }
+
+  editProduct(id: any, data: any){
+    return this.http.put(`${baseUrl}/${id}`, data)
+  }
+
+  deleteProduct(id: any){
+    return this.http.delete(`${baseUrl}/${id}`)
+  }
+
+  viewProduct(id: any){
+    return this.http.get(`${baseUrl}/${id}`)
   }
 
 }
