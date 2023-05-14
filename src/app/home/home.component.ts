@@ -9,6 +9,8 @@ import { of } from 'rxjs'
 })
 export class HomeComponent implements OnInit {
   products: any;
+  detailUrl ='view/'
+
   constructor(private myItems: WebApiService) {}
 
   ngOnInit(): void {
