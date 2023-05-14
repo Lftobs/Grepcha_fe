@@ -1,7 +1,8 @@
 <section>
     <p>mk royal products</p>
+    <button routerLink="/add">Add</button>
     <div *ngFor='let item of products'>
-        <button routerLink="/add">Add</button>
+        
         <h1 routerLink="/view/{{item.id}}">{{ item.name }} ({{ item.id }})</h1>
         <p>{{ item.description }}</p>
     </div>
