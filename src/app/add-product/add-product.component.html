@@ -1,1 +1,8 @@
 <p>add-product works!</p>
+<form>
+    <input type="text" id="name" [(ngModel)]="product.name" name="name">
+    <input type="text" id="description" [(ngModel)]="product.description" name="description">
+    <input type="number" id="price" [(ngModel)]="product.price" name="price">
+    <button (click)="createProduct()" >submit</button>
+    <button (click)="newProduct()" >add</button>
+</form>
