@@ -1,0 +1,53 @@
+header {
+
+    height: 4rem;
+
+    padding-inline: 1rem;
+
+}
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.nav-btn {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    width: 50%;
+
+    
+
+}
+
+nav button{
+
+    width: 4rem;
+
+    height: 2rem;
+
+}
+footer {
+
+    background: black;
+
+    text-align: center;
+
+    color: white;
+
+}
+@media(min-width: 760px){
+
+    .nav-btn {
+
+        width: 20%;
+
+    }
