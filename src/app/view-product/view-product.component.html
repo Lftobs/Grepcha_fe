@@ -1,7 +1,12 @@
-<p>view-product works!</p>
-<div>
-    <button routerLink="/edit/{{data.id}}">Update</button>
-    <h1>{{ data.name }}</h1>
-    <p> {{ data.description }}</p>
-    <p>Price: <small> {{ data.price }}</small></p>
-</div>
+<section>
+        <div class="edit-btn">
+            <button routerLink="/edit/{{data.id}}">Update-product</button>
+        </div>
+        <figure>
+            <img src="https://drive.google.com/uc?export=view&id=1IrP0iEAjrGKYbPKHUE96nwet6cFVQCpZ" alt="product_img" >
+        </figure> 
+        <h1>{{ data.id }}</h1>
+        <p>{{ data.description }}</p>
+        <h3>Price: $<span>{{ data.price }}</span></h3>
+        <button>Buy Now</button>
+</section>

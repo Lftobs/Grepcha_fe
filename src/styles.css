@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --blue: #002D62;
+}
+
+button {
+    outline: none;
+    border: 1px solid var(--blue);
+    background: var(--blue);
+    border-radius: .5rem;
+    color: white;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    width: 80%;
+    margin-bottom: 1.3rem;
+}
+
+label {
+    font-weight: 500;
+}
+
+input {
+    height: 2rem;
+    width: 90%;
+    margin-top: .5rem;
+    padding-inline: 1.5rem;
+    border-radius: .7rem;
+    outline: none;
+    border: 1px solid var(--blue);
+}
+
+small {
+    margin-top: .5rem;
+    display: none;
+}
+
+input:hover, input:focus-within {
+    border: 1px solid var(--blue);
+}
+
+input:valid {
+    border: 1px solid green;
+}
+
+
+input:focus-within:invalid {
+    border: 1px solid red;
+}
+
+input:focus-within:invalid + small {
+    color: red;
+    display: block;
+}
+
+button {
+    width: 50%;
+    height: 2rem;
+}
+
+/*footer {
+    background: black;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: white;
+}*/

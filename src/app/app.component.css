@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --blue: #002D62;
+}
+
+
 header {
 
     height: 4rem;
@@ -14,6 +22,15 @@ nav {
 
     align-items: center;
 
+}
+
+button {
+    outline: none;
+    border: 1px solid var(--blue);
+    background: var(--blue);
+    border-radius: .5rem;
+    color: white;
+    
 }
 
 .nav-btn {
@@ -51,3 +68,4 @@ footer {
         width: 20%;
 
     }
+}

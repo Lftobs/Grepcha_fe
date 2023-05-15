@@ -1,8 +1,26 @@
-<p>add-product works!</p>
-<form>
-    <input type="text" id="name" [(ngModel)]="product.name" name="name">
-    <input type="text" id="description" [(ngModel)]="product.description" name="description">
-    <input type="number" id="price" [(ngModel)]="product.price" name="price">
-    <button (click)="createProduct()" >submit</button>
-    <button (click)="newProduct()" >add</button>
-</form>
+<section>
+        <h1>Create product</h1>
+        <form>
+            <div>
+                <label for="name">Product Name :</label>
+                <input type="text" id="name" [(ngModel)]="product.name" id="name" name="name" pattern=".{5,}" required placeholder="Product iv">
+                <small>Name should not be less than 5 letters</small>
+            </div>
+            <div>
+                <label for="description">Product Description :</label>
+                <input type="text" id="description" [(ngModel)]="product.description" id="description" name="description" pattern=".{8,}" required>
+                <small>Description should not be less than 8 letters</small>
+            </div>
+            <div>
+                <label for="name">Product Price :</label>
+                <input type="number" id="price" [(ngModel)]="product.price" id="price" name="price" pattern="[1-9][0-9]*" min="1" required>
+                <small>Price should not be less than 0</small>
+            </div>
+            
+            
+            
+            
+            <button (click)="createProduct()" >Create</button>
+        </form>
+        
+</section>
