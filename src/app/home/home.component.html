@@ -1,12 +1,51 @@
 <section>
-    <p>mk royal products</p>
-    <button routerLink="/add">Add</button>
-    <div *ngFor='let item of products'>
-        
-        <h1 routerLink="/view/{{item.id}}">{{ item.name }} ({{ item.id }})</h1>
-        <p>{{ item.description }}</p>
-    </div>
+
+        <div class="hero">
+
+            <div class="txt">
+
+                <h1>GrepCha Gadgets</h1>
+
+                <p>atomorum expetenda laudem etiam id sale vidisse inimicus solet moderatius euripidis sagittis aliquid facilisi petentium dicat postea enim eirmod euripidis</p>
+
+                <button>GET STARTED</button>
+
+            </div>
+
+            
+
+            
+
+        </div>
+
+        <div class="products">
+
+            <div class="cont">
+
+                <div class="items" *ngFor='let item of products' >
+
+                    <figure>
+
+                        <img src="https://drive.google.com/uc?export=view&id=1IrP0iEAjrGKYbPKHUE96nwet6cFVQCpZ" alt="product_img" >
+
+                    </figure>
+
+                    <h2 routerLink="/view/{{item.id}}">{{ item.name }}</h2>
+
+                    <h5>{{ item.price }}</h5>
+
+                </div>
+
+                       
+
+            </div>
+
+            
+
+        </div>
 
 </section>
+
+
 
 
