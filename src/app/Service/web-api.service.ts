@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'
 
-const baseUrl="https://node-be-eta.vercel.app/api/products/"
+//const baseUrl="https://node-be-eta.vercel.app/api/products/"
+const baseUrl="http://127.0.0.1:8080/api/products/"
 
 @Injectable({
   providedIn: 'root'
