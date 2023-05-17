@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'
 
-const baseUrl="http://127.0.0.1:8080/api/products/"
+const baseUrl="https://node-be-eta.vercel.app/api/products/"
 
 @Injectable({
   providedIn: 'root'
@@ -39,19 +39,19 @@ export class WebApiService {
   }
 
   addProduct(data:any){
-    return this.http.post(`${baseUrl}/add`, data)
+    return this.http.post(`${baseUrl}add`, data)
   }
 
   editProduct(id: any, data: any){
-    return this.http.put(`${baseUrl}/${id}`, data)
+    return this.http.put(`${baseUrl}${id}`, data)
   }
 
   deleteProduct(id: any){
-    return this.http.delete(`${baseUrl}/${id}`)
+    return this.http.delete(`${baseUrl}${id}`)
   }
 
   viewProduct(id: any){
-    return this.http.get(`${baseUrl}/${id}`)
+    return this.http.get(`${baseUrl}${id}`)
   }
 
 }
