@@ -10,6 +10,8 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class ViewProductComponent implements OnInit {
   id: string | null = null
   data: any
+  open = false
+  
   constructor(
     private productService: WebApiService,
     private route: ActivatedRoute,
@@ -31,5 +33,24 @@ export class ViewProductComponent implements OnInit {
         error: (e) => console.log(e)
       })
   }
+
+  deleteProduct(){
+      this.productService.deleteProduct(this.id)
+        .subscribe({
+        next: res => {
+          console.log(res)
+          this.redirect()
+        },
+        error: (e) => console.log(e)
+      })
+  }
+
+  modal(){
+    this.open = true
+ }
+  
+  redirect() {
+    this.router.navigate(['home'])
+ }
 
 }

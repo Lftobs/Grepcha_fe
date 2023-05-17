@@ -1,8 +1,14 @@
 section {
     margin-top: 1rem;
+    height: calc(100vh - 9.59rem);
 }
 
 h1 {
     text-align: center;
     color: var(--blue);
+}
+
+footer {
+    position: fixed;
+    width: 100%;
 }
