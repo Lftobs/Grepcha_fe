@@ -39,7 +39,7 @@ export class WebApiService {
   }
 
   addProduct(data:any){
-    return this.http.post(`${baseUrl}add`, data)
+    return this.http.post(`${baseUrl}add`, data, { withCredentials: true })
   }
 
   editProduct(id: any, data: any){
