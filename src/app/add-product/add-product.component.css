@@ -6,3 +6,8 @@ h1 {
     text-align: center;
     color: var(--blue);
 }
+
+footer {
+    position: fixed;
+    width: 100%;
+}
