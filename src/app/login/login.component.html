@@ -1,1 +1,20 @@
-<p>login works!</p>
+<section>
+        <div class="ill"></div>
+        <form>
+            <h1>Sign-In</h1>
+            <div>
+                <label for="username">Username :<span *ngIf="error.username != ''"> ({{ error.username }})</span></label>
+                <input type="text" id="username" [(ngModel)]="login.username" id="username" name="username" pattern=".{5,}" required placeholder="John Doe">                <small>Name should not be less than 5 letters</small>
+            </div>
+	    <div>
+                <label for="password">Password : <span *ngIf="error.password != ''"> ({{ error.password }})</span></label>
+                <input type="password"
+		       [(ngModel)]="login.password" id="password" name="password" pattern=".{5,}" required placeholder="Your password" pattern="^(?=.*[a-z])(?=.*[\w_])(?=.*[0-9]).{8,}$">
+		<small>Password should contain at least a number, a special character, a capital letter, and must not be less than 8 characters</small>
+            </div>            
+            <button (click)="signIn()" >Log-in</button>
+	   <p routerLink="/sign-up">Don't have an account? create account</p> 
+        </form>
+        
+</section>
+    

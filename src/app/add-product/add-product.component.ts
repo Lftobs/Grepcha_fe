@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebApiService } from '../Service/web-api.service';
+import { Router } from '@angular/router';
 //import { [element] } from '@angular/forms'
 //import {[element]} from ''
 
@@ -15,7 +16,7 @@ export class AddProductComponent implements OnInit {
     price: 0
   }
   submitted = false;
-  constructor(private productService: WebApiService){}
+  constructor(private productService: WebApiService, private router: Router){}
 
   ngOnInit(): void {
       
@@ -33,7 +34,8 @@ export class AddProductComponent implements OnInit {
         {next: response => {
           console.log(response)
           this.submitted = true
-          this.newProduct()
+	  this.router.navigate(['home'])
+          //this.router.navigate(['view/'+ response.id])
         },
         error: (e) => console.log(e)
       }
@@ -49,6 +51,6 @@ export class AddProductComponent implements OnInit {
       price: 0
     }
   }
-  
-  
+ 
+
 }

@@ -1,5 +1,6 @@
 section {
     margin-top: 1rem;
+    height: calc(100vh - 9.59rem);
 }
 
 h1 {
