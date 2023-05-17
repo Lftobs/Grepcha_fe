@@ -39,19 +39,19 @@ export class WebApiService {
   }
 
   addProduct(data:any){
-    return this.http.post(`${baseUrl}/add/`, data)
+    return this.http.post(`${baseUrl}/add`, data)
   }
 
   editProduct(id: any, data: any){
-    return this.http.put(`${baseUrl}/${id}/`, data)
+    return this.http.put(`${baseUrl}/${id}`, data)
   }
 
   deleteProduct(id: any){
-    return this.http.delete(`${baseUrl}/${id}/`)
+    return this.http.delete(`${baseUrl}/${id}`)
   }
 
   viewProduct(id: any){
-    return this.http.get(`${baseUrl}/${id}/`)
+    return this.http.get(`${baseUrl}/${id}`)
   }
 
 }
