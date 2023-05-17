@@ -36,7 +36,7 @@ export class WebApiService {
    }
 
   getProduct() {
-    return this.http.get(`${baseUrl}`);
+    return this.http.get(`${baseUrl}`, { withCredentials: true });
   }
 
   addProduct(data:any){
@@ -44,15 +44,15 @@ export class WebApiService {
   }
 
   editProduct(id: any, data: any){
-    return this.http.put(`${baseUrl}${id}`, data)
+    return this.http.put(`${baseUrl}${id}`, data, { withCredentials: true })
   }
 
   deleteProduct(id: any){
-    return this.http.delete(`${baseUrl}${id}`)
+    return this.http.delete(`${baseUrl}${id}`, { withCredentials: true })
   }
 
   viewProduct(id: any){
-    return this.http.get(`${baseUrl}${id}`)
+    return this.http.get(`${baseUrl}${id}`, { withCredentials: true })
   }
 
 }
