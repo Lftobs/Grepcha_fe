@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../Service/auth.service';
 import { ActivatedRoute, Route, Router } from '@angular/router'
 
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit{
       pwdErr: ''
   }
   
-  constructor(private router: Router, private auth: AuthService){}
+  constructor(private router: Router, private auth: AuthService, private cookies: CookieService) { }
     
   ngOnInit(): void {
       
@@ -47,7 +48,9 @@ export class LoginComponent implements OnInit{
 	.subscribe(
 	    {
 		next: res => {
-		  console.log(res)
+		  //console.log(res.header.Set-cookies, 'cook')
+		  localStorage.setItem('token', this.cookies.get('token'))
+		  console.log(this.cookies.get('token'), 'to')
 		  localStorage.setItem('isAuth', 'true')
 		  this.router.navigate(['/'])
 		},

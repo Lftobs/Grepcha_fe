@@ -1,0 +1,62 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: .5rem;
+    
+}
+
+h1 {
+    color: var(--blue);
+}
+
+.ill {
+    background: url('https://drive.google.com/uc?export=view&id=1LlDwRdEIu0vYQd7DYHMO7QeQ72FP-tSS');
+    background-size: 100% 100%;
+    width: 95%;
+    height: 50%;
+    
+}
+
+span {
+    color: red;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+p {
+    margin-top: .5rem;
+    color: var(--blue);
+}
+    
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 50%;
+    
+}
+
+@media(min-width: 560px){
+    section {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .ill {
+        width: 20rem;
+    }
+}
+
+@media(min-width: 800px){
+    section {
+        gap: 5rem;
+        
+    }
+    form {
+        width: 40%;
+    }
+}
